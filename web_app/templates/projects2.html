@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../static/css/style4.css">
+    <!-- <script src="../js/script.js"></script> -->
+    <title>R.A.N.D.-Muzik Production</title>
+    
+</head>
+<body>
+
+    <script src="../static/js/script.js"></script>
+
+    <script>
+
+        window.onload = function(){
+            var url_string = window.location.href
+            var url = new URL(url_string)
+            var KN = url.searchParams.get("KN") == null ? "" : url.searchParams.get("KN")
+            var PN = url.searchParams.get("PN") == null  ? "" : url.searchParams.get("PN")
+            
+            document.getElementById('input_pn').value = PN;
+
+            document.getElementById('main_kn').innerHTML = KN;
+            document.getElementById('projektnr_rekla').innerHTML = PN;
+            document.getElementById('katalognr_rekla').innerHTML = KN;
+            
+        }
+    </script>
+
+    <div>
+
+    <nav id="top_bar_wrapper">
+
+        <ul class="top_bar_items">
+            <li><button id="side_button_left" onclick="openNav()">☰</button></li>
+
+            <li>
+                <div class="project_selectors">
+                    <label>Projektnummer:</label>
+                    <input class="input_pn_kn" id="input_pn">
+                </div>
+            </li>
+            <li>
+                <div class="project_selectors">
+                    <label>Katalognummer:</label>
+                    <select class="input_pn_kn">
+                        <option id="main_kn"></option>
+                        <option>dclx 2007 (NP 1) (Rekla 1)</option>
+                        <option >dclx 2007 (NP 1) (Rekla 2)</option>
+                    </select>
+
+                </div>
+            </li>
+                <li><button class="top_button" id="rekla_btn" onclick="open_rekla_nav()">Rekla bestellen</button></li>
+                <li><button class="top_button" id="freigabe_btn">TP freigeben</button></li>
+                <li><button class="top_button" id="storno_btn">Auftrag stornieren</button></li>
+                <li><button class="top_button" id="email_btn" onclick="writeMail()">Bearbeiter kontaktieren</button></li>
+        </ul>
+    </nav>
+
+
+    <div id="sidebar_left" class="sidebar_left">
+        <a href="javascript:void(0)" class="sidebar_left_closebtn" onclick="closeNav()">×</a>
+        <a href="projects2.html" class="active_page">Projektübersicht</a>
+        <a href="production_overview.php">Produktionsübersicht</a>
+      </div>
+
+
+
+
+
+
+
+    <div class="main">  
+        <div class="collapsible">
+            <button type="button" class="collapsible_button" onclick="collapse_table()">Vorstufe <i>(bestellt: 24.02.22)</i></button>
+            <!-- <div class="table_wrapper_tp"> -->
+  
+
+            <div class="collapsible_table">
+                <div class="zeile header">
+                    <div class="spalte">#</div>
+                    <div class="spalte">Arbeitsschritt</div>
+                    <div class="spalte">Fertigstellung</div>
+                    <div class="spalte">Status</div>
+                    <div class="spalte">Tagesbericht</div>
+                </div>
+                <div class='zeile fertig'>
+                    <div class='spalte'>1.</div>
+                    <div class='spalte'>LACK Maxi Überspielung</div>
+                    <div class='spalte'>20.12.21</div>
+                    <div class='spalte'>Tom</div>
+                    <div class='spalte'></div>
+                </div>
+                <div class='zeile fertig'>
+                    <div class='spalte'>1.</div>
+                    <div class='spalte'>LACK Maxi Überspielung</div>
+                    <div class='spalte'>20.12.21</div>
+                    <div class='spalte'>Tom</div>
+                    <div class='spalte'></div>
+                </div>
+                <div class='zeile fertig'>
+                    <div class='spalte'>1.</div>
+                    <div class='spalte'>LACK Maxi Überspielung</div>
+                    <div class='spalte'>20.12.21</div>
+                    <div class='spalte'>Tom</div>
+                    <div class='spalte'></div>
+                </div>
+                <div class='zeile fertig'>
+                    <div class='spalte'>1.</div>
+                    <div class='spalte'>LACK Maxi Überspielung</div>
+                    <div class='spalte'>20.12.21</div>
+                    <div class='spalte'>Tom</div>
+                    <div class='spalte'></div>
+                </div>
+                <div class='zeile current'>
+                    <div class='spalte'>1.</div>
+                    <div class='spalte'>LACK Maxi Überspielung</div>
+                    <div class='spalte'>20.12.21</div>
+                    <div class='spalte'>Tom</div>
+                    <div class='spalte'></div>
+                </div>
+                <div class='zeile'>
+                    <div class='spalte'>1.</div>
+                    <div class='spalte'>LACK Maxi Überspielung</div>
+                    <div class='spalte'>20.12.21</div>
+                    <div class='spalte'>Tom</div>
+                    <div class='spalte'></div>
+                </div>
+                <div class='zeile'>
+                    <div class='spalte'>1.</div>
+                    <div class='spalte'>LACK Maxi Überspielung</div>
+                    <div class='spalte'>20.12.21</div>
+                    <div class='spalte'>Tom</div>
+                    <div class='spalte'></div>
+                </div>
+                
+
+            </div>
+            <!-- <button type="button" class="collapsible_button_hnp">HNP <i>(bestellt: 24.02.22)</i></button> -->
+
+        </div>
+
+        <div class="side_right">
+            <div class="sidebar_right_button_wrapper">  
+                <Button class="sidebar_right_button" onclick="open_sidebar_right()">Medien</Button>
+            </div>
+            <div id="sidebar_right">
+                <a href="javascript:void(0)" class="sidebar_right_closebtn" onclick="close_sidebar_right()">×</a>
+                <embed src="../static/img/A.pdf" width="450" height="450" 
+                type="application/pdf" style="padding: 0px 35px;">            
+            </div>
+                
+
+            </div>   
+        </div>
+
+        
+    </div>
+
+    <div class="rekla_popup">
+        
+
+        <div class="rekla_content_outer">
+            
+            <Button class="rekla_closebtn" onclick="closeRekla()">×</Button>
+            <img id="header_rekla_nav" src="../static/img/logo.png"></img>
+            <Button class="rekla_nav_btn" onclick="open_rekla_bestellen()">Reklamation bestellen</Button>
+            <Button class="rekla_nav_btn" type="button" disabled>Neuer Stamper Nachpressung</Button>
+            <Button class="rekla_nav_btn" type="button" disabled>Freier Modus</Button>
+        </div>
+
+        <div class="rekla_bestellen">
+            <h1 id="header_rekla"><i>Reklamation</i></h1>
+
+            <div id="rekla_inputs">
+                
+                <div id="input_row_names">
+                    <div class="input_row">Auftrag:</div>
+                    <div class="input_row">Seite(n):</div>
+                    <div class="input_row">TP/HNP:</div>
+                    <div class="input_row">Rekla von:</div>
+                    <div class="input_row">Rekla-Typ:</div>
+                    <div class="input_row">Reklagrund:</div>
+                </div>
+
+                <div id="input_row_fields">
+                    <div class="input_row_auftrag">
+                        <label id="projektnr_rekla"></label>
+                        <label id="katalognr_rekla"></label>
+                        <label id="column_filler"> </label>
+
+                        
+                    </div>
+
+
+                    <div class="side_selector">
+                        <div id="sides_a_b">
+                            <div>
+                        
+                                <label for="side_a">A</label>
+                                <input type="checkbox" id="side_a" name="A">
+                            </div>
+
+                            <div>
+                                <label for="side_b">B</label>                            
+                                <input type="checkbox" id="side_b" name="B">
+                            </div>
+                        </div>
+                        <div id="sides_c_d">
+                            <div>
+                        
+                                <label for="side_c">C</label>
+                                <input type="checkbox" id="side_c" name="C">
+                            </div>
+
+                            <div>
+                                <label for="side_d">D</label>                            
+                                <input type="checkbox" id="side_d" name="D">
+                            </div>
+                        </div>
+
+                        <div id="sides_e_f">
+                            <div>
+                        
+                                <label for="side_e">E</label>
+                                <input type="checkbox" id="side_e" name="E">
+                            </div>
+
+                            <div>
+                                <label for="side_f">F</label>                            
+                                <input type="checkbox" id="side_f" name="F">
+                            </div>
+                        </div>
+                        <div id="sides_g_h">
+                            <div>
+                        
+                                <label for="side_g">G</label>
+                                <input type="checkbox" id="side_g" name="G">
+                            </div>
+
+                            <div>
+                                <label for="side_h">H</label>                            
+                                <input type="checkbox" id="side_h" name="H">
+                            </div>
+                        </div>
+                        <div id="sides_i_j">
+                            <div>
+                        
+                                <label for="side_i">I</label>
+                                <input type="checkbox" id="side_i" name="I">
+                            </div>
+
+                            <div>
+                                <label for="side_j">J</label>                            
+                                <input type="checkbox" id="side_j" name="J">
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <div id="input_row_tp_hnp_selector">
+                        <div id="tp_radio_grid">
+                            <div>
+                                <label id="label_tp">TP</label>
+                                <input id="tp_radio" type="radio">
+                            </div>
+                        </div>
+                        <div id="hnp_radio_grid">
+                            <div>
+                                <label id="label_hnp">HNP</label>
+                                <input id="radio_hnp" type="radio">
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+                    <div id="input_row_rekla_by">
+                        <input class="text_input_rekla" id="rekla_abteilung">
+                        <input class="text_input_rekla" id="rekla_by">                          
+                    </div>
+
+
+                    <div id="rekla_type">
+
+                        <div id="rekla_button_group_1">
+                            <div><label>Pressung<input type="radio"></div>
+                            <div><label>Stamper<input type="radio"></div>
+                        </div>  
+
+                        <div id="rekla_button_group_2">
+                            <div><label>Mutter<input type="radio"></div>
+                            <div><label>Nachschnitt<input type="radio"></div>
+                        </div>
+
+                        <div class="rekla_button_group_3">
+                            <div><label>komplett<input type="radio"></div>
+                            <div><label>Etiketten<input type="radio"></div>
+                        </div>
+
+                    </div>
+
+
+                    <div id="input_row_rekla_reason">
+                        <input id="rekla_reason_input">
+                        <!-- <div> </div> -->
+                    </div>
+
+
+                </div>
+        
+            </div>
+
+
+            <div id="rekla_submit_and_response">
+
+                <Button class="rekla_order_and_back_btn" id="zurück_btn_rekla" onclick="back_to_rekla_nav()">zurück</Button>
+                <div></div>
+                <button class="rekla_order_and_back_btn" id="submit_btn_rekla">Rekla bestellen!</button>
+
+            </div>
+
+        </div>
+
+
+
+
+
+
+
+
+        
+    
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <!-- <?php
+        $var1 = "erster String";
+        echo "hi ".$var1;
+        echo "<h1>"."Hello ".$var1."</h1>";
+    ?> -->
+
+
+
+
+</body>
+</html>

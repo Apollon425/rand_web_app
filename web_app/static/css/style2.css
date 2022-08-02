@@ -1,0 +1,191 @@
+/* body{
+    margin-left: 5%;
+    
+}
+
+
+p.para_class{
+    font-weight: bold;
+    font-size: 50px;
+    background-color: aqua;
+    
+    
+}
+
+div.div_class{
+    font-size: 50px;
+    background-color: #ff00aa;
+    clear: left;
+}
+#img_container{
+    background-image: url("../images/at.jpg");
+    height: 400px;
+    width: 500px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: blueviolet;
+    float: left;
+    
+
+}
+#img_container:hover{
+    height: 500px;
+    width: 700px;
+}
+ */
+
+
+
+ *{
+     margin: 0px;
+     padding: 0px;
+     /* box-sizing: border-box; */
+ }
+
+ .logo{
+    background-color: aqua;
+    min-height: 8vh;
+}
+
+#sidebar_left{
+   background-color: blue;
+   position: fixed;
+   width: 10%;
+   height: 100%;
+
+
+}
+
+
+.sidebar_elements p{
+
+  font-size: larger;
+  color: black;
+  overflow: hidden;
+}
+
+.sidebar_elements input{
+  max-width: 90%;
+}
+
+
+ #top_bar{
+     background-color: brown;
+     margin-left: 10%;
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+     min-height: 8vh;  
+ }
+
+
+
+
+ .nav_links{
+     display: flex;
+
+     justify-content: space-around;
+     width: 100%;
+     list-style-type: none;
+     
+ }
+
+
+
+
+
+
+
+
+
+
+ 
+
+ #sidebar_right {
+    height: 100%;
+    margin-left: 70%;
+    top: 0;
+    left: 0;
+    width: 0;
+
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+  }
+  
+  .sidebar_right a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidebar_right a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidebar_right .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  .openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+  }
+  
+  .openbtn:hover {
+    background-color: #444;
+  }
+/*
+  #main {
+    margin-left: 90%;  
+    margin-top: 0;
+    background-color: aqua;
+    /* transition: margin-left .5s;
+    padding: 16px; 
+}*/
+  
+
+ /* ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    height: 10%;
+    width: 100%;
+    background-color: #d0d0dd;
+    position: fixed;
+    overflow: auto;
+     
+ }
+
+ li{
+     display: inline;
+
+
+ }
+
+ li a{
+    color: black;
+    margin: 50px;
+    font-size: larger;
+
+    
+ } */
+
+
+
+
+
+
+
+ 
